@@ -84,7 +84,9 @@
     </div>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
+        document.addEventListener("DOMContentoLoaded", function (){
             nem window.Vlibras.Widget('https://vlibras.gov.br/app');
+        });
         (function(d){
             var s = d.createElement("script");
             s.setAttribute("data-account", "INSIRA_SEU_CÓDIGO_USERWAY_AQUI"); //exemplo para aplicações maiores
