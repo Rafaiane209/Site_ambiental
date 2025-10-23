@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parque Lagoa do Guapé - Aventura na Natureza</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fontes divertidas -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-storage-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Skip link para acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+    
+    <header role="banner">
+        <div class="logo">
+            <img src="images/logo.png" alt="Parque Lagoa do Guapé - Logo" width="60" height="60">
+            <h1>Parque Lagoa do Guapé</h1>
+        </div>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav role="navigation" aria-label="Navegação principal">
+            <a href="#home" aria-current="page">🌱 Início</a>
+            <a href="#trilhas">🌳 Árvores</a>
+            <a href="#quiz">🎮 Quiz</a>
+            <a href="#contato">📩 Contato</a>
+            <a href="admin.html" class="btn-admin">🔑 Admin</a>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section id="home" class="banner" aria-labelledby="banner-heading">
+            <div class="banner-content">
+                <h2 id="banner-heading">Bem-vindo ao Parque Municipal Luiz Balboni! 🌿</h2>
+                <p>Descubra as maravilhas da <strong>Mata Atlântica</strong> com histórias, imagens e curiosidades sobre as árvores do nosso parque!</p>
+                <div class="banner-buttons">
+                    <a href="#trilhas" class="btn btn-primary">🌳 Explorar Árvores</a>
+                    <a href="#quiz" class="btn btn-secondary">🎮 Jogar Quiz</a>
+                </div>
+            </div>
+            <div class="banner-decoration">
+                <div class="decoration-tree" aria-hidden="true"></div>
+                <div class="decoration-butterfly" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <section id="trilhas" class="trilhas" aria-labelledby="trilhas-heading">
+            <div class="section-header">
+                <h2 id="trilhas-heading">🌱 Conheça as Espécies</h2>
+                <p class="sub-text">Clique nas árvores para ver sua descrição e acessar o QR Code!</p>
+            </div>
+            <div class="arvores-container" id="arvoresContainer" role="list" aria-label="Lista de árvores">
+                <!-- Carregado via Firebase -->
+                <div class="loading" aria-live="polite">Carregando árvores...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>🌍 Parque Lagoa do Guapé &copy; 2025 - Educação Ambiental Infantil</p>
+        <div class="footer-decoration" aria-hidden="true">
+            <span class="leaf">🍃</span>
+            <span class="leaf">🍂</span>
+            <span class="leaf">🌿</span>
+        </div>
+    </footer>
+    <script>
+        (function(d){
+            var s = d.createElement("script");
+            s.setAttribute("data-account", "INSIRA_SEU_CÓDIGO_USERWAY_AQUI"); //exemplo para aplicações maiores
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.body || d.head).appendChild(s);
+        })(document);
+    </script>
+</body>
+</html>

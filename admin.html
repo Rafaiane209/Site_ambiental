@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Parque Lagoa do Guapé</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="firebase-config.js"></script>
+    <script defer src="admin.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Área do Administrador</h1>
+    </header>
+
+    <section class="admin-section">
+        <h2>Cadastrar Árvore</h2>
+        <form id="formArvore">
+            <input type="text" id="nome" placeholder="Nome da Árvore" required>
+            <textarea id="descricao" placeholder="Descrição" required></textarea>
+            <input type="url" id="imagem" placeholder="URL da imagem" required>
+            <input type="url" id="qrcode" placeholder="URL do QR Code" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+</body>
+</html>
