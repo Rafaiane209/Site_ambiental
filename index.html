@@ -15,13 +15,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-storage-compat.js"></script>
     <script src="firebase-config.js"></script>
     <script defer src="script.js"></script>
-
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            nem window.Vlibras.Widget('https://vlibras.gov.br/app');
-        });
-    </script>
 </head>
 <body>
     <!-- Skip link para acessibilidade -->
@@ -82,7 +75,18 @@
             <span class="leaf">🌿</span>
         </div>
     </footer>
+     <!-- Integração com VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            nem window.Vlibras.Widget('https://vlibras.gov.br/app');
+        });
         (function(d){
             var s = d.createElement("script");
             s.setAttribute("data-account", "INSIRA_SEU_CÓDIGO_USERWAY_AQUI"); //exemplo para aplicações maiores
@@ -93,4 +97,5 @@
 </body>
 
 </html>
+
 
